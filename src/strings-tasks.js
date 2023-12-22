@@ -476,7 +476,7 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/[a-zA-Z]/g, function (c) {
+  return str.replace(/[a-zA-Z]/g, (c) => {
     const offset = c <= 'Z' ? 65 : 97;
     return String.fromCharCode(((c.charCodeAt(0) - offset + 13) % 26) + offset);
   });
